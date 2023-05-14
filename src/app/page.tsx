@@ -1,7 +1,8 @@
-export default function Home() {
-  return (
-    <div className='text-red-500'>
-      <h1>okay</h1>
-    </div>
-  );
+import Button from '@/components/ui/Button';
+import { db } from '@/lib/db';
+
+export default async function Home() {
+  // await db.set('test', 'test');
+
+  return <Button>Hello</Button>;
 }
