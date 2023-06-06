@@ -13,6 +13,7 @@ interface AddFriendButtonProps {}
 
 const AddFriendButton: FC<AddFriendButtonProps> = ({}) => {
   type FormData = z.infer<typeof addFriendValidator>;
+
   const [showSuccessState, setshowSuccessState] = useState<boolean>(false);
 
   const {
@@ -73,7 +74,7 @@ const AddFriendButton: FC<AddFriendButtonProps> = ({}) => {
         />
         <Button>Add</Button>
       </div>
-      <p className='mt-1 tex-sm text-red-600 '>{errors.email?.message}</p>
+      <p className='mt-1 tex-sm text-red-600'>{errors.email?.message}</p>
       {showSuccessState ? (
         <p className='mt-1 text-sm text-green-600'>Friend request sent!</p>
       ) : null}

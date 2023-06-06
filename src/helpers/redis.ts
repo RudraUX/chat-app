@@ -3,6 +3,8 @@ const authToken = process.env.UPSTASH_REDIS_REST_TOKEN;
 
 type Command = 'zrang' | 'sismember' | 'get' | 'smembers';
 
+//preventing catching
+
 export async function fetchRedis(
   command: Command,
   ...args: (string | number)[]
